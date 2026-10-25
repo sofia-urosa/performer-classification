@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    color: #374151;
+    margin: 0;
+    padding: 16px;
+    background: #fff;
+  }
+  .card {
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 18px;
+  }
+  .subtitle { color: #6b7280; font-size: 12px; }
+  .item { display: flex; gap: 9px; margin-top: 14px; font-size: 13px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; margin-top: 3px; }
+  .red { background: #dc2626; }
+  .amber { background: #d97706; }
+  .green { background: #16a34a; }
+  .note { border-top: 1px solid #e5e7eb; margin-top: 16px; padding-top: 12px; }
+  svg { width: 100%; height: auto; display: block; margin: 14px 0; }
+</style>
+</head>
+<body>
+<div class="card">
+  <strong>Performer classification</strong>
+  <p class="subtitle">Based on delivered tasks per contributor, by project</p>
+
+  <svg viewBox="0 0 320 48" role="img"
+       aria-label="Illustrative task distribution">
+    <line x1="8" y1="24" x2="312" y2="24"
+          stroke="#9ca3af" stroke-width="2"/>
+    <line x1="42" y1="24" x2="90" y2="24"
+          stroke="#dc2626" stroke-width="5"/>
+    <line x1="90" y1="24" x2="170" y2="24"
+          stroke="#d97706" stroke-width="5"/>
+    <line x1="170" y1="24" x2="278" y2="24"
+          stroke="#16a34a" stroke-width="5"/>
+    <circle cx="90" cy="24" r="5" fill="#dc2626"/>
+    <circle cx="170" cy="24" r="5" fill="#d97706"/>
+  </svg>
+
+  <div class="item">
+    <span class="dot green"></span>
+    <div><b>Top performers</b><br>Delivered tasks above the project average.</div>
+  </div>
+  <div class="item">
+    <span class="dot amber"></span>
+    <div><b>Middle performers</b><br>Above Q1 and at or below the average.</div>
+  </div>
+  <div class="item">
+    <span class="dot red"></span>
+    <div><b>Bottom performers</b><br>At or below Q1 (25th percentile).</div>
+  </div>
+
+  <p class="subtitle note">
+    Classification is calculated separately for each project.
+    The diagram is illustrative, not a data-scaled boxplot.
+  </p>
+</div>
+</body>
+</html>
